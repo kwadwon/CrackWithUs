@@ -1,0 +1,6 @@
+#ignore all python .pyc files
+*.pyc
+#ignore all .swp files
+*.swp
+#ignore settings.py file since it is different on local host and webfaction
+CrackItDemo/settings.py
