@@ -3,7 +3,8 @@
 # Author: Kwadwo Nyarko, Perry Ogwuche - 8-21-2-2013
 
 from django.conf.urls import patterns, include, url
-from CrackItDemo.login import views
+from CrackItDemo.login import views as login_views
+from CrackItDemo.video import views as video_views
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -12,8 +13,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
 
     # This URL directs you to the login/signup page
-    url(r'^$', views.login_page, name='login-page'),
-
+    url(r'^$', login_views.login_page, name='login-page'),
+	url(r'^video', video_views.video_page, name='video-page'),
 
     # Examples:
     # url(r'^$', 'CrackItDemo.views.home', name='home'),
